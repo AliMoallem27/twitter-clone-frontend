@@ -1,0 +1,5 @@
+@import "./assets/fonts/segoe/font-face.css";
+
+body {
+  font-family: "Segoe UI Regular";
+}
