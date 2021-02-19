@@ -13,8 +13,8 @@ import Loading from "../mainSection/Loading";
 import backIco from "../../assets/images/svg/back.svg";
 
 function TweetPage({ history, match }) {
-  let tweetData = useData(`http://localhost:3001/tweets/${match.params.id}`);
-  let mentions = useData(`http://localhost:3001/mentions?tweetId=${match.params.id}`);
+  let tweetData = useData("tweets", match.params.id);
+  let mentions = useData("mentions", match.params.id);
 
   let setMenuStatus = useHambergurMenu("SETTER");
   let { width } = useWindowSize();

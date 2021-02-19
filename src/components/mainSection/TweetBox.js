@@ -24,11 +24,9 @@ function TweetBox({ id, avatar = "/images/unknown.png", title, username, date, b
     window.scrollTo(0, 0);
   };
 
-  let url = isMention ? `http://localhost:3001/mentions/${id}` : `http://localhost:3001/tweets/${id}`;
+  let [handleRetweetRequest, rtBtn] = useTweetBtns({ clicked: retweeted, counter: retweetNumber });
 
-  let [handleRetweetRequest, rtBtn] = useTweetBtns(url, "TOGGLE_RT", { clicked: retweeted, counter: retweetNumber });
-
-  let [handleLikeRequest, likeBtn] = useTweetBtns(url, "TOGGLE_LIKE", { clicked: liked, counter: likeNumber });
+  let [handleLikeRequest, likeBtn] = useTweetBtns({ clicked: liked, counter: likeNumber });
 
   return (
     <article onClick={handleTweetClick} className="p-4 pb-1 pt-2 border-b-1 border-gray-light cursor-pointer hover:bg-tweet-box-hover transition duration-200">

@@ -1,29 +1,13 @@
 import { useState } from "react";
 
 // This hook handles the click on RT button or like button
-function useTweetBtns(url, reqType, initialState) {
+function useTweetBtns(initialState) {
   const [state, setState] = useState(initialState);
 
   function TweetReactionRequest(event) {
     event.stopPropagation();
-    let [newCounterProp, btnClickProp] = (reqType === "TOGGLE_LIKE" && ["likeNumber", "liked"]) || (reqType === "TOGGLE_RT" && ["retweetNumber", "retweeted"]);
 
     let counterUpdateValue = (state.clicked && -1) || (!state.clicked && 1);
-
-    let newCounterValue = parseInt(state.counter) + parseInt(counterUpdateValue);
-
-    let reqBody = {
-      [btnClickProp]: !state.clicked,
-      [newCounterProp]: newCounterValue,
-    };
-
-    fetch(url, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(reqBody),
-    });
 
     setState((preState) => ({
       clicked: !preState.clicked,

@@ -5,7 +5,7 @@ import SearchInput from "../sidebarSection/SearchInput";
 import useData from "../../hooks/useData";
 
 function SideBar() {
-  const whoToFollowUsers = useData("http://localhost:3001/whoToFollows");
+  const whoToFollowUsers = useData("whoToFollows");
 
   return (
     <aside className="h-screen sticky top-0 z-40 lg:ml-7 hidden lg:block lg:w-300p xl:w-350p">

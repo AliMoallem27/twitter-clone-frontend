@@ -18,7 +18,7 @@ function Home() {
   document.title = "Home / Twitter";
   let [newTweets, setNewTweets] = useState([]);
 
-  let tweets = useData("http://localhost:3001/tweets");
+  let tweets = useData("tweets");
 
   let { width } = useWindowSize();
 
