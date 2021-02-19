@@ -2,7 +2,7 @@ import React from "react";
 import MainHeader from "../mainSection/MainHeader";
 import MainContainer from "../mainSection/MainContainer";
 import SideBar from "../layouts/SideBar";
-import useTweet from "../../hooks/useTweet";
+import useData from "../../hooks/useData";
 import TweetBox from "../mainSection/TweetBox";
 import useWindowSize from "../../hooks/useWindowSize";
 import { ReactSVG } from "react-svg";
@@ -13,8 +13,8 @@ import Loading from "../mainSection/Loading";
 import backIco from "../../assets/images/svg/back.svg";
 
 function TweetPage({ history, match }) {
-  let tweetData = useTweet(`http://localhost:3000/tweets/${match.params.id}`);
-  let mentions = useTweet(`http://localhost:3000/mentions?tweetId=${match.params.id}`);
+  let tweetData = useData(`http://localhost:3001/tweets/${match.params.id}`);
+  let mentions = useData(`http://localhost:3001/mentions?tweetId=${match.params.id}`);
 
   let setMenuStatus = useHambergurMenu("SETTER");
   let { width } = useWindowSize();
@@ -38,7 +38,6 @@ function TweetPage({ history, match }) {
             <h2 className="text-xl font-semibold font-segoe-bold">Tweet</h2>
           </div>
         </MainHeader>
-        {}
         {tweetData.length === 0 && <Loading />}
         {tweetData.length !== 0 && <TweetBox {...tweetData} />}
         {mentions.map((mentionData) => {

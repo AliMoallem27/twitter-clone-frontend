@@ -2,10 +2,10 @@ import React from "react";
 import SideBarBox from "../sidebarSection/SideBarBox";
 import WhoToFollowBox from "../sidebarSection/WhoToFollowBox";
 import SearchInput from "../sidebarSection/SearchInput";
-import useTweet from "../../hooks/useTweet";
+import useData from "../../hooks/useData";
 
 function SideBar() {
-  const whoToFollowUsers = useTweet("http://localhost:3000/whoToFollows");
+  const whoToFollowUsers = useData("http://localhost:3001/whoToFollows");
 
   return (
     <aside className="h-screen sticky top-0 z-40 lg:ml-7 hidden lg:block lg:w-300p xl:w-350p">

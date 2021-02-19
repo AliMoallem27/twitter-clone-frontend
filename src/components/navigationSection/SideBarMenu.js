@@ -2,7 +2,6 @@ import React from "react";
 import { ReactSVG } from "react-svg";
 import AccountInfoBox from "./AccountInfoBox";
 import useUser from "../../hooks/useUser";
-// import useWindowSize from "../../hooks/useWindowSize";
 import MenuItemCollection from "./MenuItemCollection";
 import { Link } from "react-router-dom";
 
@@ -11,7 +10,6 @@ import writeIco from "../../assets/images/svg/write.svg";
 
 function SideBarMenu() {
   let userData = useUser();
-  //  let {width, height} = useWindowSize()
 
   return (
     <nav className="hidden sm:block sm:w-58p xl:w-275p sm:h-screen sm:sticky sm:top-0 mx-3">

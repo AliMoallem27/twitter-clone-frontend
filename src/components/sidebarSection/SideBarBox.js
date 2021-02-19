@@ -1,5 +1,6 @@
 import React from "react";
 
+// This component is used as the right sidebar (SideBar) box
 function SideBarBox({ children, endLink, endText, title }) {
   return (
     <section className="w-full bg-sidebar-box rounded-2xl">

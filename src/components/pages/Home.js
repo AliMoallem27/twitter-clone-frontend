@@ -6,7 +6,7 @@ import TweetBox from "../mainSection/TweetBox";
 import TweetCreator from "../mainSection/TweetCreator";
 import Loading from "../mainSection/Loading";
 import MainContainer from "../mainSection/MainContainer";
-import useTweet from "../../hooks/useTweet";
+import useData from "../../hooks/useData";
 import useWindowSize from "../../hooks/useWindowSize";
 import { ReactSVG } from "react-svg";
 import useUser from "../../hooks/useUser";
@@ -18,7 +18,7 @@ function Home() {
   document.title = "Home / Twitter";
   let [newTweets, setNewTweets] = useState([]);
 
-  let tweets = useTweet("http://localhost:3000/tweets");
+  let tweets = useData("http://localhost:3001/tweets");
 
   let { width } = useWindowSize();
 

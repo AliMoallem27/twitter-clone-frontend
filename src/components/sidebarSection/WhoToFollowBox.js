@@ -1,5 +1,6 @@
 import React from "react";
 
+// This component represents the person(follow recommend) of SideBarBox
 function WhoToFollowBox({ title, username, avatar }) {
   return (
     <section className="flex py-3 px-4 border-b-1 border-gray-200 hover:bg-sidebar-box-hover cursor-pointer transition duration-200">

@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+// This hook handles the click on RT button or like button
 function useTweetBtns(url, reqType, initialState) {
   const [state, setState] = useState(initialState);
 

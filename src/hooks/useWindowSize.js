@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+// This hook instantly returns the width and length of viewport
 function useWindowSize() {
   let initialWindowSize = { width: window.innerWidth, height: window.innerHeight };
   let [windowSize, setWindowSize] = useState(initialWindowSize);

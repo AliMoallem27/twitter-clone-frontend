@@ -24,7 +24,7 @@ function TweetBox({ id, avatar = "/images/unknown.png", title, username, date, b
     window.scrollTo(0, 0);
   };
 
-  let url = isMention ? `http://localhost:3000/mentions/${id}` : `http://localhost:3000/tweets/${id}`;
+  let url = isMention ? `http://localhost:3001/mentions/${id}` : `http://localhost:3001/tweets/${id}`;
 
   let [handleRetweetRequest, rtBtn] = useTweetBtns(url, "TOGGLE_RT", { clicked: retweeted, counter: retweetNumber });
 

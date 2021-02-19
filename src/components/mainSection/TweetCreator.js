@@ -47,7 +47,7 @@ function TweetCreator({ setNewTweets }) {
       likeNumber: "0",
     };
 
-    let url = "http://localhost:3000/tweets";
+    let url = "http://localhost:3001/tweets";
     fetch(url, {
       method: "POST",
       headers: {

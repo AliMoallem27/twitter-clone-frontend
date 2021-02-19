@@ -9,7 +9,7 @@
   "tweets": [
     {
       "id": 1,
-      "body": "<p>بچه که بودم تقریباً هر دو~چهار هفته باید آمپول می‌زدم و معمولاً هم در بیمارستانی بنام شریعتی. بعد فکر می‌کردم دکتر شریعتی واقعاً رئیس خبیث این بیمارستان بوده و خودش «دستور داده» که به بچه‌ها محکم آمپول بزنید! ازش متنفر بودم. بعد از افتخاراتم این بود که روز تولدم، روز وفات اونه!!</p>",
+      "body": "بچه که بودم تقریباً هر دو~چهار هفته باید آمپول می‌زدم و معمولاً هم در بیمارستانی بنام شریعتی. بعد فکر می‌کردم دکتر شریعتی واقعاً رئیس خبیث این بیمارستان بوده و خودش «دستور داده» که به بچه‌ها محکم آمپول بزنید! ازش متنفر بودم. بعد از افتخاراتم این بود که روز تولدم، روز وفات اونه!!",
       "title": "Pūyān",
       "username": "Pouyan_01001010",
       "date": "Jun 18, 2020",
@@ -48,16 +48,16 @@
       "avatar": "/images/Pratham.jpg",
       "verified": false,
       "retweeted": false,
-      "liked": false,
+      "liked": true,
       "whoRetweeted": null,
       "whoLiked": "Cheri Mullins",
       "replyNumber": "23",
-      "retweetNumber": "206",
-      "likeNumber": "829"
+      "retweetNumber": 206,
+      "likeNumber": 830
     },
     {
       "id": 4,
-      "body": "<p>گیت‌هاب بد کرد با ما، اما قهر نکنیم.</p><p>«لازمه» با دنیا در ارتباط باشیم. لازمه «مشارکت» کنیم. لازم ارزش ایجاد کنیم تا به راحتی قابل حذف نباشیم.</p>",
+      "body": "گیت‌هاب بد کرد با ما، اما قهر نکنیم.\n\n«لازمه» با دنیا در ارتباط باشیم. لازمه «مشارکت» کنیم. لازم ارزش ایجاد کنیم تا به راحتی قابل حذف نباشیم.",
       "title": "Hamed",
       "username": "Hamed",
       "date": "13m",
@@ -80,12 +80,12 @@
       "avatar": "/images/ryan.jpg",
       "verified": false,
       "retweeted": true,
-      "liked": true,
+      "liked": false,
       "whoRetweeted": "Sabrine",
       "whoLiked": null,
       "replyNumber": "",
       "retweetNumber": 3,
-      "likeNumber": 14
+      "likeNumber": 13
     },
     {
       "id": 6,
@@ -114,10 +114,10 @@
       "date": "Jun 11, 2010",
       "avatar": "/images/unknown.png",
       "verified": true,
-      "retweeted": true,
+      "retweeted": false,
       "liked": true,
       "replyNumber": 3,
-      "retweetNumber": 3,
+      "retweetNumber": 2,
       "likeNumber": 7
     },
     {
@@ -160,10 +160,10 @@
       "avatar": "/images/unknown.png",
       "verified": true,
       "retweeted": false,
-      "liked": false,
+      "liked": true,
       "replyNumber": 3,
       "retweetNumber": "2",
-      "likeNumber": "6"
+      "likeNumber": 7
     },
     {
       "id": 5,
@@ -298,7 +298,7 @@
       "avatar": "/images/nima.jpg"
     },
     {
-      "title": "علیرضا",
+      "title": "Alireza",
       "username": "AlirezaNasseh",
       "avatar": "/images/alireza.jpg"
     }

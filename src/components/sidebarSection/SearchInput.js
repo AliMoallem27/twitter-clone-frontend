@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import searchIco from "../../assets/images/svg/search.svg";
 import { ReactSVG } from "react-svg";
 
+// This component is used as the right sidebar (SideBar) search box
 function SearchInput() {
   let [inputStyle, setInputStyle] = useState("UNFOCUSED");
 
