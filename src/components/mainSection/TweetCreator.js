@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import TextareaAutosize from "react-textarea-autosize";
 import { ReactSVG } from "react-svg";
-
 import pictureIco from "../../assets/images/svg/picture.svg";
 import gifIco from "../../assets/images/svg/gif.svg";
 import statisticsIco from "../../assets/images/svg/statistics.svg";
 import emojiIco from "../../assets/images/svg/emoji.svg";
 import calendarIco from "../../assets/images/svg/calendar.svg";
+import useSendTweet from "../../hooks/useSendTweet";
 
 import useUser from "../../hooks/useUser";
 
@@ -16,6 +16,11 @@ function TweetCreator({ setNewTweets }) {
 
   let userData = useUser();
 
+  const { newTweets, handleSendTweet } = useSendTweet(tweetContent, userData, setTweetContent, setWritingStatus);
+
+  console.log(newTweets);
+  setNewTweets(newTweets);
+
   let handleFocusTextArea = () =>
     setWritingStatus((previous) => ({
       ...previous,
@@ -24,41 +29,11 @@ function TweetCreator({ setNewTweets }) {
 
   let handleChangeTextArea = (e) => {
     setTweetContent(e.target.value);
+
     setWritingStatus((previous) => ({
       ...previous,
       writed: e.target.value.length === 0 ? false : true,
     }));
-  };
-
-  let handleSendTweet = () => {
-    let tweetBody = {
-      body: tweetContent,
-      title: userData.title,
-      username: userData.username,
-      date: new Date().toDateString().slice(4),
-      avatar: userData.avatar,
-      verified: false,
-      retweeted: false,
-      liked: false,
-      whoRetweeted: null,
-      whoLiked: null,
-      replyNumber: "0",
-      retweetNumber: "0",
-      likeNumber: "0",
-    };
-
-    let url = "http://localhost:3001/tweets";
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(tweetBody),
-    })
-      .then((res) => res.json())
-      .then((responeData) => setNewTweets((preNewTweets) => [...preNewTweets, responeData]));
-    setTweetContent("");
-    setWritingStatus({ focused: false, writed: false });
   };
 
   return (
