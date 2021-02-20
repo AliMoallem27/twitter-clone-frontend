@@ -18,27 +18,37 @@ import helpIco from "../../assets/images/svg/help.svg";
 import dataSaverIco from "../../assets/images/svg/dataSaver.svg";
 import displayIco from "../../assets/images/svg/display.svg";
 import newslettersIco from "../../assets/images/svg/newsletters.svg";
+import { Link } from "react-router-dom";
 
 function HamburgerMenu() {
   let userData = useUser();
   let menuStatus = useHambergurMenu("GETTER");
   let setMenuStatus = useHambergurMenu("SETTER");
 
-  console.log(menuStatus);
+  const handleCloseMenu = (event) => {
+    event.stopPropagation();
+    setMenuStatus("CLOSE");
+  };
+
   return (
-    <React.Fragment>
-      <div className={`block sm:hidden animate-boxShow ${menuStatus === "CLOSE" ? "hidden" : menuStatus === "OPEN" && "block"} bg-black-opacity-40 opacity-0 w-screen h-screen fixed top-0 left-0 z-49`}></div>
-      <nav className={`block sm:hidden w-3/4 fixed top-0 left-0 z-50 transform ${menuStatus === "OPEN" ? "translate-x-0" : menuStatus === "CLOSE" && "translate-x-100vw-n"} transition-transform duration-300 ease-in-out		`}>
-        <main className="bg-white w-full h-full overflow-y-auto border-r-2 border-gray-light">
+    <>
+      <div onClick={handleCloseMenu} className={`block sm:hidden animate-boxShow ${menuStatus === "CLOSE" ? "hidden" : menuStatus === "OPEN" && "block"} bg-black-opacity-40 opacity-0 w-screen h-screen fixed top-0 left-0 z-49`}></div>
+      <nav className={`block sm:hidden w-3/4 h-screen fixed top-0 left-0 z-50 transform ${menuStatus === "OPEN" ? "translate-x-0" : menuStatus === "CLOSE" && "translate-x-100vw-n"} transition-transform duration-300 ease-in-out`}>
+        <main className="bg-white w-full h-screen overflow-y-auto border-r-2 border-gray-light pb-32">
           <header className="flex justify-between items-center sticky top-0 bg-white z-50 px-4 h-53p border-b-1 border-gray-200">
             <span className="text-xl font-semibold font-segoe-bold">Account info</span>
-            <div className="p-2" onClick={() => setMenuStatus("CLOSE")}>
+            <div className="p-2" onClick={handleCloseMenu}>
               <ReactSVG src={closeIco} className="w-22.5p fill-current text-twitter-blue" />
             </div>
           </header>
           <section className="px-4 py-3">
             <div className="flex items-center justify-between">
-              <img src={userData.avatar} className="w-39p rounded-full" alt="unknown" />
+              <figure>
+                <Link to="/profile" onClick={handleCloseMenu}>
+                  <img src={userData.avatar} className="w-39p rounded-full" alt="unknown" />
+                </Link>
+              </figure>
+
               <div className="border-1 border-twitter-blue rounded-full p-1 self-start">
                 <ReactSVG src={addIco} className="w-22.5p fill-current text-twitter-blue" />
               </div>
@@ -59,31 +69,31 @@ function HamburgerMenu() {
             </div>
           </section>
           <section className="px-4 mt-2 border-b-1 border-gray-light">
-            <HamMenuItem name="Profile" icon={profileIco} />
-            <HamMenuItem name="Lists" icon={listIco} />
-            <HamMenuItem name="Topics" icon={topicIco} />
-            <HamMenuItem name="Bookmarks" icon={bookmarkIco} />
-            <HamMenuItem name="Moments" icon={momentIco} />
-            <HamMenuItem name="Newsletters" icon={newslettersIco} />
+            <HamMenuItem name="Profile" icon={profileIco} linkTo="/profile" />
+            <HamMenuItem name="Lists" icon={listIco} linkTo="/lists" />
+            <HamMenuItem name="Topics" icon={topicIco} linkTo="/topics" />
+            <HamMenuItem name="Bookmarks" icon={bookmarkIco} linkTo="/bookmarks" />
+            <HamMenuItem name="Moments" icon={momentIco} linkTo="/moments" />
+            <HamMenuItem name="Newsletters" icon={newslettersIco} linkTo="#" />
           </section>
           <section className="px-4 mt-2 border-b-1 border-gray-light">
-            <HamMenuItem name="Twitter Ads" icon={adsIco} />
-            <HamMenuItem name="Analytics" icon={analyticsIco} />
+            <HamMenuItem name="Twitter Ads" icon={adsIco} linkTo="#" />
+            <HamMenuItem name="Analytics" icon={analyticsIco} linkTo="#" />
           </section>
           <section className="px-4 mt-2 border-b-1 border-gray-light">
-            <HamMenuItem name="Settings and privacy" icon={settingIco} />
-            <HamMenuItem name="Help Center" icon={helpIco} />
+            <HamMenuItem name="Settings and privacy" icon={settingIco} linkTo="#" />
+            <HamMenuItem name="Help Center" icon={helpIco} linkTo="#" />
           </section>
           <section className="px-4 mt-2 border-b-1 border-gray-light">
-            <HamMenuItem name="Date saver" icon={dataSaverIco} />
-            <HamMenuItem name="Display" icon={displayIco} />
+            <HamMenuItem name="Date saver" icon={dataSaverIco} linkTo="#" />
+            <HamMenuItem name="Display" icon={displayIco} linkTo="#" />
           </section>
           <section className="px-4 mt-4 mb-14">
             <span>Log out</span>
           </section>
         </main>
       </nav>
-    </React.Fragment>
+    </>
   );
 }
 

@@ -1,30 +1,64 @@
-# Getting Started with Create React App
+# Twitter fronted clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+(One of) the most similar Twitter frontend clone. view demo: ###
+
+NOTE: demo link uses static-mode of this project and some features such as sending and receiving data with the server do not work.
+
+- built using [React](https://reactjs.org/)
+- bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+- styled with [tailwindcss](https://tailwindcss.com/)
+- Fully responsive just like Twitter site
+
+## Features
+
+- Writing tweet: You can write your tweets and they will be saved in the db.json file.
+- Like or RT tweet: You can Like or RT tweets and mentions and they will be saved in the db.json file.
+
+This project has two branch: master and static-mode.
+The only difference between the master branch and the static-mode branch is in requesting data from the server.
+
+## Customization
+
+If you want to have your Twitter statically in your domain, you just need to edit the db.json file related to the static-mode branch
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory in **master branch**, you should run:
+
+### `json-server --watch db.json --port 3001`
+
+### `npm start`
+
+Server url: [http://localhost:3001](http://localhost:3001)
+
+In the project directory in **static-mode branch**, you should run:
 
 ### `npm start`
 
 Runs the app in the development mode.\
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+To know about the server: [json-server](https://www.npmjs.com/package/json-server)
+
 The page will reload if you make edits.\
+
 You will also see any lint errors in the console.
 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
+
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
+
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
+
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
