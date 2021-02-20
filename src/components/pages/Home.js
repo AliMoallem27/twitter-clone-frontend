@@ -16,6 +16,7 @@ import starsIco from "../../assets/images/svg/stars.svg";
 
 function Home() {
   document.title = "Home / Twitter";
+
   let [newTweets, setNewTweets] = useState([]);
 
   let tweets = useData("tweets");

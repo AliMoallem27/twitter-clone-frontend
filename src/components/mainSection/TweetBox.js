@@ -53,7 +53,7 @@ function TweetBox({ id, avatar = "/images/unknown.png", title, username, date, b
               </span>
             )}
             <span className="text-text-gray-one mr-1 whitespace-nowrap">{`@${username}`}</span>
-            <span className="text-text-gray-one mr-1 whitespace-nowrap relative bottom-1">.</span>
+            <span className="text-text-gray-one mr-1 whitespace-nowrap pb-2">.</span>
             <span className="text-text-gray-one mr-1 whitespace-nowrap">{date}</span>
           </section>
           <article>

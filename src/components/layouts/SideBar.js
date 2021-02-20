@@ -16,7 +16,7 @@ function SideBar() {
         <main>
           <SideBarBox endLink="#" endText="See more" title="Who to follow">
             {whoToFollowUsers.map((userData) => (
-              <WhoToFollowBox title={userData.title} username={userData.username} avatar={userData.avatar} />
+              <WhoToFollowBox title={userData.title} username={userData.username} avatar={userData.avatar} key={userData.id} />
             ))}
           </SideBarBox>
         </main>

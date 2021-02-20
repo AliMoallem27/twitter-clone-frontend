@@ -288,16 +288,19 @@
   ],
   "whoToFollows": [
     {
+      "id": 1,
       "title": "Negar Jamalifard",
       "username": "NegarDev",
       "avatar": "/images/negar.jpg"
     },
     {
+      "id": 2,
       "title": "Nima Arefi",
       "username": "nima_arf",
       "avatar": "/images/nima.jpg"
     },
     {
+      "id": 3,
       "title": "Alireza",
       "username": "AlirezaNasseh",
       "avatar": "/images/alireza.jpg"
