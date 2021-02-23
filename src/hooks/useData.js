@@ -3,13 +3,22 @@ import db from "../db.json";
 
 // This hook takes data from the server
 function useData(url, params = false) {
-  let [tweets, setTweets] = useState([]);
+  let [data, setData] = useState([]);
 
   useEffect(() => {
-    const tweetData = !params ? db[url] : db[url][params];
-    setTweets(tweetData);
+    let tweetData;
+
+    if (!params) tweetData = db[url];
+
+    if (params) {
+      tweetData = db[url].filter((oneitem) => {
+        return (url === "tweets" && oneitem.id === parseInt(params - 1)) || (url === "mentions" && oneitem.tweetId === parseInt(params - 1));
+      });
+    }
+
+    setData(tweetData);
   }, [url, params]);
-  return tweets;
+  return data;
 }
 
 export default useData;

@@ -13,14 +13,15 @@ import Loading from "../mainSection/Loading";
 import backIco from "../../assets/images/svg/back.svg";
 
 function TweetPage({ history, match }) {
-  let tweetData = useData("tweets", match.params.id);
+  let [tweetData] = useData("tweets", match.params.id);
+
   let mentions = useData("mentions", match.params.id);
 
   let setMenuStatus = useHambergurMenu("SETTER");
   let { width } = useWindowSize();
   let userData = useUser();
 
-  document.title = `${tweetData.title} on Twitter: "${tweetData.body}" / Twitter`;
+  document.title = tweetData ? `${tweetData.title} on Twitter: "${tweetData.body}" / Twitter` : "Loading ...";
 
   return (
     <main className="md:w-min w-full flex">
@@ -38,8 +39,8 @@ function TweetPage({ history, match }) {
             <h2 className="text-xl font-semibold font-segoe-bold">Tweet</h2>
           </div>
         </MainHeader>
-        {tweetData.length === 0 && <Loading />}
-        {tweetData.length !== 0 && <TweetBox {...tweetData} />}
+        {typeof tweetData === "undefined" && <Loading />}
+        {typeof tweetData !== "undefined" && <TweetBox {...tweetData} />}
         {mentions.map((mentionData) => {
           return <TweetBox {...mentionData} key={mentionData.id} isMention={true} />;
         })}
