@@ -10,7 +10,7 @@ function App() {
   return (
     <UserProvider>
       <AppProvider>
-        <Router basename="/twitter-clone-frontend">
+        <Router>
           <Container>
             {/* this app has only two main layout: navigation and main. and sidebar(right) is in main */}
             <Navigation />
