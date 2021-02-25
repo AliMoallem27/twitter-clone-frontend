@@ -1,8 +1,10 @@
 # Twitter fronted clone
 
-(One of) the most similar Twitter frontend clone. view demo: ###
+(One of) the most similar Twitter frontend clone. view demo: [demo](https://twitter-clone-frontend.netlify.app/)
 
 NOTE: demo link uses static-mode of this project and some features such as sending and receiving data with the server do not work.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aae9d9a7-fdb7-48ff-9f22-07b2c5103f43/deploy-status)](https://app.netlify.com/sites/twitter-clone-frontend/deploys)
 
 - built using [React](https://reactjs.org/)
 - bootstrapped with [Create React App](https://github.com/facebook/create-react-app)

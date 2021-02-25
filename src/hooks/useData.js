@@ -12,7 +12,7 @@ function useData(url, params = false) {
 
     if (params) {
       tweetData = db[url].filter((oneitem) => {
-        return (url === "tweets" && oneitem.id === parseInt(params - 1)) || (url === "mentions" && oneitem.tweetId === parseInt(params - 1));
+        return (url === "tweets" && oneitem.id === parseInt(params)) || (url === "mentions" && oneitem.tweetId === parseInt(params));
       });
     }
 
