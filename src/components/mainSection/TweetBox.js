@@ -65,9 +65,9 @@ function TweetBox({ id, avatar = "/images/unknown.png", title, username, date, b
             <div className="flex justify-between sm:grid sm:grid-cols-5">
               <TweetBoxBtn btnIco={replyIco} counter={replyNumber} />
 
-              <TweetBoxBtn onClick={(event) => handleRetweetRequest(event)} btnIco={rtBtn.clicked ? RTboldIco : RTIco} counter={rtBtn.counter} secondColor={rtBtn.clicked ? "green" : "blue"} status={rtBtn.clicked} />
+              <TweetBoxBtn onClick={(event) => handleRetweetRequest(event)} btnIco={rtBtn.clicked ? RTboldIco : RTIco} counter={rtBtn.counter} secondColor={rtBtn.clicked && "green"} status={rtBtn.clicked} />
 
-              <TweetBoxBtn onClick={(event) => handleLikeRequest(event)} btnIco={likeBtn.clicked ? likeFIco : likeIco} counter={likeBtn.counter} secondColor={likeBtn.clicked ? "red" : "blue"} status={likeBtn.clicked} />
+              <TweetBoxBtn onClick={(event) => handleLikeRequest(event)} btnIco={likeBtn.clicked ? likeFIco : likeIco} counter={likeBtn.counter} secondColor={likeBtn.clicked && "red"} status={likeBtn.clicked} />
 
               <TweetBoxBtn btnIco={sendIco} />
 
