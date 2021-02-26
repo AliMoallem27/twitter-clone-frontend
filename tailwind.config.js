@@ -1,5 +1,41 @@
 module.exports = {
-  purge: [],
+  purge: [
+    "./src/components/layouts/Container.js",
+    "./src/components/layouts/SideBar.js",
+    "./src/components/mainSection/Loading.js",
+    "./src/components/mainSection/MainContainer.js",
+
+    "./src/components/mainSection/MainHeader.js",
+
+    "./src/components/mainSection/TweetBox.js",
+    "./src/components/mainSection/TweetBoxBtn.js",
+    "./src/components/mainSection/TweetCreator.js",
+
+    "./src/components/navigationSection/AccountInfoBox.js",
+
+    "./src/components/navigationSection/HamburgerMenu.js",
+    "./src/components/navigationSection/HamMenuItem.js",
+    "./src/components/navigationSection/MenuItemCollection.js",
+    "./src/components/navigationSection/SideBarMenu.js",
+    "./src/components/navigationSection/SideBarMenuItem.js",
+    "./src/components/navigationSection/TabBar.js",
+
+    "./src/components/pages/Bookmarks.js",
+    "./src/components/pages/Explore.js",
+    "./src/components/pages/Home.js",
+    "./src/components/pages/Lists.js",
+    "./src/components/pages/Messages.js",
+    "./src/components/pages/Notifications.js",
+    "./src/components/pages/Profile.js",
+    "./src/components/pages/TweetPage.js",
+
+    "./src/components/sidebarSection/SearchInput.js",
+
+    "./src/components/sidebarSection/SideBarBox.js",
+    "./src/components/sidebarSection/WhoToFollowBox.js",
+
+    "./src/components/sidebarSection/SearchInput.js",
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
