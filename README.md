@@ -1,20 +1,35 @@
 # Twitter fronted clone
 
-(One of) the most similar Twitter frontend clone. view demo: ###
+(One of) the most similar Twitter frontend clone. view demo: [demo](https://twitter-clone-frontend.netlify.app/)
 
 NOTE: demo link uses static-mode of this project and some features such as sending and receiving data with the server do not work.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aae9d9a7-fdb7-48ff-9f22-07b2c5103f43/deploy-status)](https://app.netlify.com/sites/twitter-clone-frontend/deploys)
+
+[![Website twitter-clone-frontend.netlify.app](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://twitter-clone-frontend.netlify.app/)
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+[![GitHub contributors](https://img.shields.io/github/contributors/AliMoallem27/twitter-clone-frontend.svg)](https://github.com/AliMoallem27/twitter-clone-frontend/graphs/contributors/)
+
+![demo image](https://raw.githubusercontent.com/AliMoallem27/twitter-clone-frontend/main/public/images/demo-image.png)
+
 - built using [React](https://reactjs.org/)
+
 - bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+
 - styled with [tailwindcss](https://tailwindcss.com/)
+
 - Fully responsive just like Twitter site
 
 ## Features
 
 - Writing tweet: You can write your tweets and they will be saved in the db.json file.
+
 - Like or RT tweet: You can Like or RT tweets and mentions and they will be saved in the db.json file.
 
 This project has two branch: master and static-mode.
+
 The only difference between the master branch and the static-mode branch is in requesting data from the server.
 
 ## Customization
@@ -23,17 +38,13 @@ If you want to have your Twitter statically in your domain, you just need to edi
 
 ## Available Scripts
 
-In the project directory in **master branch**, you should run:
+In the project directory in **main branch**, you should run:
 
 ### `json-server --watch db.json --port 3001`
 
 ### `npm start`
 
 Server url: [http://localhost:3001](http://localhost:3001)
-
-In the project directory in **static-mode branch**, you should run:
-
-### `npm start`
 
 Runs the app in the development mode.\
 
@@ -72,33 +83,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
