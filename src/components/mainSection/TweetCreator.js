@@ -18,7 +18,7 @@ function TweetCreator({ setNewTweets }) {
 
   const { newTweets, handleSendTweet } = useSendTweet(tweetContent, userData, setTweetContent, setWritingStatus);
 
-  console.log(newTweets);
+  // console.log(newTweets);
   setNewTweets(newTweets);
 
   let handleFocusTextArea = () =>
