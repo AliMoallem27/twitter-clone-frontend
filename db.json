@@ -2,7 +2,7 @@
   "user": {
     "title": "Ali Moallem",
     "username": "AliMoallem27",
-    "avatar": "/images/avatar.png",
+    "avatar": "/images/avatar.jpg",
     "follower": 130,
     "following": 50
   },
@@ -109,7 +109,7 @@
       "title": "Ali Moallem",
       "username": "AliMoallem27",
       "date": "Feb 20 2021",
-      "avatar": "/images/avatar.png",
+      "avatar": "/images/avatar.jpg",
       "verified": false,
       "retweeted": false,
       "liked": false,
